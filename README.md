@@ -6,4 +6,5 @@ https://www.nyserda.ny.gov/all-programs/programs/chargeny/support-electric/data-
 
 and attempts to recreate similar dashboards as those produced by NYSERDA.
 
-It is intended as practice of R.
+It is intended as practice of R and Git practice.  
+
