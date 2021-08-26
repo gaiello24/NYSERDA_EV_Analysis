@@ -175,9 +175,17 @@ pre code {
 <h2>R Markdown</h2>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;/Users/GavinAiello/R&quot;</code></pre>
 <pre class="r"><code>setwd('/Users/GavinAiello/R/NYSERDA EV Analysis/NYSERDA_EV_Analysis')</code></pre>
+<p>Another attempt at adding R code chunk:</p>
+<pre class="r"><code>#Load all sheets from Excel Workbook resource.xlsx
+
+library(readxl)
+
+setwd('/Users/GavinAiello/R/NYSERDA EV Data')
+
+sheet_names &lt;- excel_sheets('resources.xlsx')
+ev_data_list &lt;- lapply(sheet_names, read_excel, path = 'resources.xlsx')
+names(ev_data_list) &lt;- sheet_names</code></pre>
 </div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>

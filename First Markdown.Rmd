@@ -19,6 +19,21 @@ When you click the **Knit** button a document will be generated that includes bo
 setwd('/Users/GavinAiello/R/NYSERDA EV Analysis/NYSERDA_EV_Analysis')
 ```
 
+Another attempt at adding R code chunk:
+
+```{r}
+#Load all sheets from Excel Workbook resource.xlsx
+
+library(readxl)
+
+setwd('/Users/GavinAiello/R/NYSERDA EV Data')
+
+sheet_names <- excel_sheets('resources.xlsx')
+ev_data_list <- lapply(sheet_names, read_excel, path = 'resources.xlsx')
+names(ev_data_list) <- sheet_names
+
+```
+
 ## Including Plots
 
 You can also embed plots, for example:
